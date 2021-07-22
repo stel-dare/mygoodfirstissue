@@ -1,0 +1,208 @@
+body{
+    background-color: #18191a;
+    color: #e4e6eb;  
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+.submit{
+    background: #3a3b3c;
+    color: #e4e6eb;
+    display: block;
+    margin: 0 auto;
+}
+
+.submit:hover {
+    color: #b0b3b8;
+}
+
+.divider{
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid #3e4042;
+}
+
+.query span:nth-child(1){
+    color: #ffcdd2;
+}
+.query span:nth-child(2){
+    color: #e1bee7;
+}
+
+.query label:nth-child(3){
+margin-right: 0.5em;
+}
+
+.query label:nth-child(3) input{
+    color: #c5cae9;
+    background-color: #18191a;
+    width: 3ch;
+    border-width: 0px;
+    border-right: 2px solid #b0b3b8;
+    animation: blink 0.8s infinite;
+    /* -webkit-animation: blink 0.8s infinite; */
+    /* border-radius: 5px; */
+    /* text-align: right; */
+}
+.query input:nth-child(4){
+    color: #b2dfdb;
+    background-color: #18191a;
+    width: 12.5ch;
+    border-width: 0px;
+    border-right: 2px solid #b0b3b8;
+    animation: blink 0.8s infinite;
+    /* -webkit-animation: blink 0.8s infinite; */
+    /* border-radius: 5px; */
+}
+
+.query label:nth-child(3) input:focus, .query input:nth-child(4):focus {
+    border-right: 0px;
+} 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+@keyframes blink {
+    0% {border-right-color: #18191a;}
+    50% {border-right-color: #b0b3b8;}
+    100% {border-right-color: #18191a};
+  }
+
+.card{
+    background-color: #242526;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    margin: 1em auto;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.issueDesc, .repoLanguages{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #b0b3b8;
+    justify-content: space-between;
+}
+
+.issueDetails, .repoDetails{
+    display: flex;
+    border-bottom: 1px solid #b0b3b8;
+}
+
+.issueDate, .repoName, .repoStars{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    border-right: 1px solid #b0b3b8;
+    justify-content: space-between;
+    padding-left: 0.4em;
+}
+
+.issueLabels, .repoDesc, .repoLastPush{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 55%; 
+    padding-left: 0.4em;
+}
+
+.issueLabels p, .repoLanguages p{
+    margin-bottom: 0;
+}
+
+.repoLanguages p span{
+    padding-right: 1em;
+    display: inline-block;
+}
+
+.repoStats{
+    display: flex;
+}
+
+.card-title{
+    color: #81d4fa;
+}
+
+.label{
+    border: 1px solid #a5d6a7;
+    border-radius: 10px;
+    color: #a5d6a7;
+    padding: 0.1em;
+    display: inline-block;
+}
+
+.spinner-border{
+    width: 4rem;
+    height: 4rem;
+    color: #cfd8dc;
+}
+
+.page-link {
+    background-color: #242526;
+    border-color: #18191a;
+    color: #e4e6eb;
+    cursor: pointer;
+}
+
+.pagination {
+    width: max-content;
+    margin: 1em auto;
+}
+
+.page-link:focus, .page-link:hover {
+    color: #18191a;
+    background-color: #e4e6eb;
+}
+
+.alert {
+    width: max-content;
+    width: fit-content;
+    margin: 1rem auto;
+    font-family: 'Share Tech Mono', monospace;
+    color: #18191a;
+    background-color: #e4e6eb;
+}
+
+.card a{
+    color:#f0f4c3
+}
+.card a:hover{
+    color:#f0f4c3
+}
+
+.btn-link{
+    color: #e4e6eb;
+}
+
+.btn-link:hover {
+    color: #e4e6eb;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgb(238 230 235 / 25%);
+}
+
+.navbar-brand{
+    white-space: normal;
+}
+
+footer span{
+    font-size: 1.25rem;
+}
+@media (min-width: 768px)
+{.col-md-5 {
+    flex: 0 0 auto;
+    width: 45%;
+}}
+@media (min-width: 1200px){
+    .col-xl-3 {
+    width: 30%;
+}}
+
