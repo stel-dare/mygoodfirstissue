@@ -2,6 +2,7 @@ window.onload = getIssues(1);
 
 function getIssues(page) {
     if (!document.getElementById("error").classList.contains("d-none")) document.getElementById("error").classList.add("d-none")
+    if (!document.getElementById("no-issues").classList.contains("d-none")) document.getElementById("no-issues").classList.add("d-none")
     spinner();
     let perc = document.getElementById("perc").value;
     let lang = document.getElementById("lang").value;
@@ -11,8 +12,8 @@ function getIssues(page) {
         if (this.readyState === XMLHttpRequest.DONE) {
             if (this.status === 0 || (this.status >= 200 && this.status < 400)) {
                 spinner();
-                // if server does not send empty response
-                if (this.responseText) {
+                // if server sends a response
+                if (this.responseText != "[]") {
                     let results = JSON.parse(this.responseText);
                     results.forEach(issue => {
                         let card = document.createElement("DIV");
@@ -77,6 +78,10 @@ function getIssues(page) {
 
                     document.getElementById("row").setAttribute("page", `${page++}`)
                 }
+
+                else if (this.responseText === "[]") {
+                    displayNoIssues()
+                }
                 else {
                     displayError();
                 }
@@ -124,4 +129,10 @@ function prev() {
 
 function displayError() {
     document.getElementById("error").classList.remove("d-none")
+}
+
+function displayNoIssues() {
+    document.getElementById("no-issues").classList.remove("d-none")
+    document.getElementById("no-issues-perc").innerText = document.getElementById("perc").value
+    document.getElementById("no-issues-lang").innerText = document.getElementById("lang").value
 }

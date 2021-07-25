@@ -136,6 +136,7 @@ input[type=number] {
     color: #a5d6a7;
     padding: 0.1em;
     display: inline-block;
+    margin: 0.2em auto;
 }
 
 .spinner-border{
